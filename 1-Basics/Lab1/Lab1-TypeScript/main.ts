@@ -14,13 +14,13 @@ passengers.push(new Person("Анастасия", "Анастасьева"));
 let buyTime = new Date(2019, 9, 18, 15, 36, 50, 0);
 
 let tickets1 = [];
-tickets1.push(passengers[0]);
-tickets1.push(passengers[1]);
-tickets1.push(passengers[2]);
+tickets1.push(new Ticket(passengers[0], buyTime));
+tickets1.push(new Ticket(passengers[1], buyTime));
+tickets1.push(new Ticket(passengers[2], buyTime));
 let tickets2 = [];
-tickets2.push(passengers[1]);
-tickets2.push(passengers[2]);
-tickets2.push(passengers[3]);
+tickets2.push(new Ticket(passengers[1], buyTime));
+tickets2.push(new Ticket(passengers[2], buyTime));
+tickets2.push(new Ticket(passengers[3], buyTime));
 
 let flightTime1 = new Date(2019, 9, 19, 14, 35, 56, 0);
 let flightTime2 = new Date(2019, 9, 20, 13, 32, 51, 0);
@@ -31,6 +31,8 @@ flights.push(new Flight("Москва", flightTime2, "Красноярск", tic
 
 let aircraft = new Aircraft(flights, pilot);
 
-console.log(pilot.firstName);
-
-console.log(123);
+console.log(aircraft.toStringDetails());
+console.log("\n");
+console.log(aircraft.allTimeFlights[0].toStringDetails());
+console.log();
+console.log(aircraft.allTimeFlights[1].toStringDetails());

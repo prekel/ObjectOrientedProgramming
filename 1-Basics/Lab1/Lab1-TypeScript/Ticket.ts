@@ -17,4 +17,8 @@ export class Ticket {
         this._owner = owner;
         this._buyTime = buyTime;
     }
+
+    public toString = () : string => {
+        return `Покупатель: ${this.owner}; Время покупки: ${this.buyTime}`;
+    }
 }

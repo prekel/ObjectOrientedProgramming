@@ -21,7 +21,7 @@ export class Flight {
         this._flightTime = value;
     }
 
-    private _passengers: Array<Ticket>;
+    private readonly _passengers: Array<Ticket>;
 
     get passengers(): Array<Ticket> {
         return this._passengers;
@@ -37,10 +37,18 @@ export class Flight {
         this._departurePlace = value;
     }
 
-    constructor(arrivalPlace: string, flightTime: Date, departurePlace: string, passengers: Array<Ticket>) {
-        this._arrivalPlace = arrivalPlace;
-        this._flightTime = flightTime;
+    constructor(departurePlace: string, flightTime: Date, arrivalPlace: string, passengers: Array<Ticket>) {
         this._departurePlace = departurePlace;
+        this._flightTime = flightTime;
+        this._arrivalPlace = arrivalPlace;
         this._passengers = passengers;
+    }
+
+    public toString = () : string => {
+        return `Место отправления: ${this.departurePlace}; Место прибытия: ${this.arrivalPlace}; Дата рейса: ${this.flightTime}; Кол-во купленных билетов: ${this.passengers.length}`;
+    };
+
+    public toStringDetails = () : string => {
+        return `Место отправления: ${this.departurePlace}; Место прибытия: ${this.arrivalPlace}; Дата рейса: ${this.flightTime}\nКупленные билеты:\n${this.passengers.join("\n")}`;
     }
 }
