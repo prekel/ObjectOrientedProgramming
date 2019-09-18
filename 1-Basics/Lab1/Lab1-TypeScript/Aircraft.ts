@@ -19,7 +19,8 @@ export class Aircraft
         return this._allTimeFlights;
     }
 
-    constructor(pilot: Person) {
+    constructor(flights: Array<Flight>, pilot: Person) {
+        this._allTimeFlights = flights;
         this._pilot = pilot;
     }
 }

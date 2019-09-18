@@ -37,9 +37,10 @@ export class Flight {
         this._departurePlace = value;
     }
 
-    constructor(arrivalPlace: string, flightTime: Date, departurePlace: string) {
+    constructor(arrivalPlace: string, flightTime: Date, departurePlace: string, passengers: Array<Ticket>) {
         this._arrivalPlace = arrivalPlace;
         this._flightTime = flightTime;
         this._departurePlace = departurePlace;
+        this._passengers = passengers;
     }
 }

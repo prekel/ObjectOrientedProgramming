@@ -15,4 +15,8 @@ export class Person {
         this._firstName = firstName;
         this._lastName = lastName;
     }
+
+    public toString = () : string => {
+        return this.firstName + " " + this.lastName;
+    }
 }

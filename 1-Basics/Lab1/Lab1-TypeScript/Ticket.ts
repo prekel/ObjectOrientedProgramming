@@ -8,6 +8,7 @@ export class Ticket {
     }
 
     private readonly _buyTime: Date;
+
     get buyTime(): Date {
         return this._buyTime;
     }
