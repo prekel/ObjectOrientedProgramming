@@ -1,9 +1,11 @@
+// Лабораторная работа 1. Связывание объектов по ассоциациям классов
+// Вариант 16
+// Прекель Владислав
+
 import {Person} from "./Person";
 import {Ticket} from "./Ticket";
 import {Flight} from "./Flight";
 import {Aircraft} from "./Aircraft";
-
-let pilot = new Person("Иван", "Иванов");
 
 let passengers = [];
 passengers.push(new Person("Пётр", "Петров"));
@@ -29,6 +31,7 @@ let flights = [];
 flights.push(new Flight("Красноярск", flightTime1, "Москва", tickets1));
 flights.push(new Flight("Москва", flightTime2, "Красноярск", tickets2));
 
+let pilot = new Person("Иван", "Иванов");
 let aircraft = new Aircraft(flights, pilot);
 
 console.log(aircraft.toStringDetails());
