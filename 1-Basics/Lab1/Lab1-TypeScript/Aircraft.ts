@@ -25,10 +25,10 @@ export class Aircraft
     }
 
     public toString = () : string => {
-        return `Пилот: ${this.pilot}\nКол-во рейсов за всё время: ${this.allTimeFlights.length}`
+        return `Пилот: ${this.pilot}\nКол-во рейсов за всё время: ${this.allTimeFlights.length}`;
     };
 
-    public toStringDetails = () : string => {
-        return `Пилот: ${this.pilot}\nРейсы за всё время:\n${this.allTimeFlights.join("\n")}`
+    public toStringDetails = () : string => {;
+        return `Пилот: ${this.pilot}\nРейсы за всё время:\n${this.allTimeFlights.join("\n")}`;
     }
 }
