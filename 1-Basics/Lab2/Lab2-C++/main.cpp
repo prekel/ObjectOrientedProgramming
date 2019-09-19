@@ -1,17 +1,17 @@
 #include <iostream>
 
-//#ifdef _WIN32
-//#include <Windows.h>
-//#endif
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 #include "Person.h"
 
 int main()
 {
-//#ifdef _WIN32
-//    SetConsoleOutputCP(CP_UTF8);
-//    SetConsoleCP(CP_UTF8);
-//#endif
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+#endif
 
     std::cout << "Hello, World!" << std::endl;
 
