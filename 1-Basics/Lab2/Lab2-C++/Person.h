@@ -6,20 +6,21 @@
 class Person
 {
 private:
-    std::string _firstName;
-    std::string _lastName;
+    std::string _FirstName;
+    std::string _LastName;
 public:
     std::string getFirstName()
     {
-        return _firstName;
+        return _FirstName;
     }
     std::string getLastName()
     {
-        return _lastName;
+        return _LastName;
     }
 
     Person(std::string firstName, std::string lastName);
-};
 
+    virtual ~Person() = default;
+};
 
 #endif // PERSON_H
