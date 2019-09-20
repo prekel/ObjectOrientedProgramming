@@ -6,6 +6,7 @@
 package com.mycompany.lab2;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
@@ -47,7 +48,7 @@ public class Lab2 {
         Teacher Tch = new Teacher("Федор",
                                   "Михайлович",
                                   "Достоевский", 
-                                  new GregorianCalendar(1821,10,30), "Профессор");
+                                  new GregorianCalendar(1821, Calendar.NOVEMBER,30), "Профессор");
         Person.AddPerson(St);
         Person.AddPerson(Tch);
         
