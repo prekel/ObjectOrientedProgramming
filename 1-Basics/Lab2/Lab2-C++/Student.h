@@ -12,8 +12,11 @@ public:
     {
         return _TicketId;
     }
-    Student(const std::string& firstName, const std::string& lastName,
+    Student(const std::string& firstName,
+            const std::string& lastName, Date dateOfBirth,
             int ticketId);
+
+    std::string getFullInfo() override;
 };
 
 #endif // STUDENT_H

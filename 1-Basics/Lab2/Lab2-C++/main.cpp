@@ -5,6 +5,9 @@
 #endif
 
 #include "Person.h"
+#include "Student.h"
+
+#include <chrono>
 
 int main()
 {
@@ -15,10 +18,19 @@ int main()
 
     std::cout << "Hello, World!" << std::endl;
 
-    auto p1 = new Person("Иван", "Иванов");
+    auto p1 = new Student("Иван", "Иванов", Date(22, 9, 2019), 1234);
+    auto p2 = new Student("Иван1", "Иванов1", Date(21, 9, 2019), 12345);
 
     std::cout << p1->getFirstName() << std::endl;
 
+    std::cout << p1->getFullInfo() << std::endl;
+
+    Person::getAllPerson()->push_back(p1);
+    Person::getAllPerson()->push_back(p2);
+
+    auto allp = Person::getAllPerson();
+
 	delete p1;
+	delete p2;
     return 0;
 }
