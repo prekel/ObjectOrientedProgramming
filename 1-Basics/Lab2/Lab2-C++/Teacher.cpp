@@ -6,7 +6,7 @@
 
 Teacher::Teacher(std::string firstName, std::string lastName,
                  Date dateOfBirth, Department* department) : Person(std::move(firstName), std::move(lastName),
-                                                                    std::move(dateOfBirth))
+                                                                    dateOfBirth)
 {
     _Department = department;
     _Department->getTeachers()->push_back(this);
