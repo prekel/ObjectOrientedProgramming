@@ -11,4 +11,4 @@ add_executable(Lab2_CPP main.cpp
         Department.cpp Department.h
         Date.cpp Date.h
         Declarations.h
-        IShowable.h)
+        )

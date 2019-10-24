@@ -2,7 +2,7 @@
 #define HEADOFDEPARTMENT_H
 
 #include "Teacher.h"
-//#include "Department.h"
+#include "Department.h"
 
 class HeadOfDepartment : public Teacher
 {

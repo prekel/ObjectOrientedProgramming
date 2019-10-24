@@ -6,9 +6,8 @@
 #include <string>
 
 #include "Declarations.h"
-#include "IShowable.h"
 
-class Department : public IShowable
+class Department
 {
 private:
     std::string _Name;
@@ -42,7 +41,7 @@ public:
 
     explicit Department(std::string name);
 
-    std::string ToString() override;
+    std::string ToString();
 
     ~Department();
 };

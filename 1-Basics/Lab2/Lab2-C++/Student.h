@@ -2,7 +2,6 @@
 #define STUDENT_H
 
 #include "Person.h"
-#include "IShowable.h"
 
 class Student : public Person
 {

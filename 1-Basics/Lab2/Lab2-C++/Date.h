@@ -4,9 +4,7 @@
 #include <string>
 #include <cassert>
 
-#include "IShowable.h"
-
-struct Date : public IShowable
+struct Date
 {
 private:
     int _Day = 1;
@@ -45,7 +43,7 @@ public:
 
     Date(int day, int month, int year);
 
-    std::string ToString() override;
+    std::string ToString();
 };
 
 

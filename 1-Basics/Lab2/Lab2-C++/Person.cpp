@@ -7,7 +7,7 @@ Person::Person(std::string firstName, std::string lastName, Date dateOfBirth)
 {
     _FirstName = std::move(firstName);
     _LastName = std::move(lastName);
-    _DateOfBirth = std::move(dateOfBirth);
+    _DateOfBirth = dateOfBirth;
     getAllPerson()->push_back(this);
 }
 

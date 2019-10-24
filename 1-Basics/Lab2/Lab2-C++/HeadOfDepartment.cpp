@@ -5,7 +5,7 @@
 HeadOfDepartment::HeadOfDepartment(std::string firstName,
                                    std::string lastName, Date dateOfBirth,
                                    Department* department) : Teacher(std::move(firstName), std::move(lastName),
-                                                                     std::move(dateOfBirth), department)
+                                                                     dateOfBirth, department)
 {
     department->setHead(this);
 }

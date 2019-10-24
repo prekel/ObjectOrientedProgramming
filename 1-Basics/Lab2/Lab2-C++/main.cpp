@@ -16,9 +16,6 @@ int main()
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
 #endif
-
-    std::cout << "Hello, World!" << std::endl;
-
     auto dept1 = new Department("Кафедра кафедры");
     auto head1 = new HeadOfDepartment("Арсений", "Арсеньев", Date(21, 10, 1980), dept1);
     auto dept2 = new Department("Кафедра вторая");
