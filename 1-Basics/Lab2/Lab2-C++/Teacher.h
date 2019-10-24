@@ -15,12 +15,12 @@ public:
         return _Department;
     }
 
-    Teacher(const std::string& firstName, const std::string& lastName,
-            const Date& dateOfBirth, Department* department) : Person(
-            firstName, lastName, dateOfBirth)
-    {
-        _Department = department;
-    }
+    Teacher(std::string firstName, std::string lastName,
+            Date dateOfBirth, Department* department);
+
+    std::string ToString() override;
+
+    ~Teacher() override = default;
 };
 
 #endif // TEACHER_H

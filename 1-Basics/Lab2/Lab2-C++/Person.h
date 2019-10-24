@@ -7,8 +7,9 @@
 #include <vector>
 
 #include "Date.h"
+#include "IShowable.h"
 
-class Person
+class Person : public IShowable
 {
 private:
     std::string _FirstName;
@@ -38,9 +39,11 @@ public:
         return &_AllPerson;
     };
 
+    static std::string getAllPersonInfo();
+
     Person(std::string firstName, std::string lastName, Date dateOfBirth);
 
-    virtual std::string getFullInfo() = 0;
+    std::string ToString() override;
 
     virtual ~Person() = default;
 };

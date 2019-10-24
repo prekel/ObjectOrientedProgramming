@@ -1,14 +1,15 @@
 #include "Student.h"
 
-Student::Student(const std::string& firstName,
-                 const std::string& lastName, Date dateOfBirth,
-                 int ticketId)
-        : Person(firstName, lastName, dateOfBirth)
+#include <utility>
+
+Student::Student(std::string firstName,
+                 std::string lastName, Date dateOfBirth,
+                 int ticketId) : Person(std::move(firstName), std::move(lastName), dateOfBirth)
 {
     _TicketId = ticketId;
 }
 
-std::string Student::getFullInfo()
+std::string Student::ToString()
 {
-    return std::to_string(getTicketId());
+    return "Студент: " + Person::ToString() + "; Номер билета: " + std::to_string(getTicketId());
 }

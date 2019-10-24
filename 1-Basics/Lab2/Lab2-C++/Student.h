@@ -2,6 +2,7 @@
 #define STUDENT_H
 
 #include "Person.h"
+#include "IShowable.h"
 
 class Student : public Person
 {
@@ -12,11 +13,11 @@ public:
     {
         return _TicketId;
     }
-    Student(const std::string& firstName,
-            const std::string& lastName, Date dateOfBirth,
+    Student(std::string firstName,
+            std::string lastName, Date dateOfBirth,
             int ticketId);
 
-    std::string getFullInfo() override;
+    std::string ToString() override;
 };
 
 #endif // STUDENT_H

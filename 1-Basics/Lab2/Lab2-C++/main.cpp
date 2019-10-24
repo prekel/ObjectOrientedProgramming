@@ -6,8 +6,9 @@
 
 #include "Person.h"
 #include "Student.h"
-
-#include <chrono>
+#include "HeadOfDepartment.h"
+#include "Department.h"
+#include "Teacher.h"
 
 int main()
 {
@@ -18,19 +19,43 @@ int main()
 
     std::cout << "Hello, World!" << std::endl;
 
-    auto p1 = new Student("Иван", "Иванов", Date(22, 9, 2019), 1234);
-    auto p2 = new Student("Иван1", "Иванов1", Date(21, 9, 2019), 12345);
+    auto dept1 = new Department("Кафедра кафедры");
+    auto head1 = new HeadOfDepartment("Арсений", "Арсеньев", Date(10, 10, 1980), dept1);
+    auto dept2 = new Department("Кафедра вторая");
+    auto head2 = new HeadOfDepartment("Аркадий", "Аркадьев", Date(20, 12, 1990), dept2);
 
-    std::cout << p1->getFirstName() << std::endl;
+    auto teacher11 = new Teacher("Станислав", "Станиславов", Date(12, 12, 1982), dept1);
+    auto teacher12 = new Teacher("Сергей", "Сергеев", Date(6, 2, 1972), dept1);
+    auto teacher13 = new Teacher("Леонид", "Леонидов", Date(8, 2, 1984), dept1);
 
-    std::cout << p1->getFullInfo() << std::endl;
+    auto teacher21 = new Teacher("Анастасия", "Анастасьева", Date(1, 4, 1970), dept2);
+    auto teacher22 = new Teacher("Виктор", "Викторьев", Date(2, 5, 1981), dept2);
+    auto teacher23 = new Teacher("Артемий", "Артемьев", Date(3, 6, 1982), dept2);
 
-    Person::getAllPerson()->push_back(p1);
-    Person::getAllPerson()->push_back(p2);
+    auto p1 = new Student("Иван", "Иванов", Date(22, 9, 2019), 123456);
+    auto p2 = new Student("Владислав", "Владиславов", Date(21, 9, 2019), 112345);
 
-    auto allp = Person::getAllPerson();
 
-	delete p1;
-	delete p2;
+    for (auto dept : {dept1, dept2})
+    {
+        std::cout << dept->getName() << ":" << std::endl;
+        for (auto teacher : *dept->getTeachers())
+        {
+            std::cout << teacher->ToString() << std::endl;
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+
+    std::cout << "Все созданные записи о людях: " << std::endl << Person::getAllPersonInfo();
+
+    for (auto person : *Person::getAllPerson())
+    {
+        delete person;
+    }
+
+    delete dept1;
+    delete dept2;
+
     return 0;
 }

@@ -4,11 +4,14 @@
 #include "Teacher.h"
 //#include "Department.h"
 
-class HeadOfDepartment : public Teacher {
+class HeadOfDepartment : public Teacher
+{
 public:
-    HeadOfDepartment(const std::string& firstName,
-                     const std::string& lastName, const Date& dateOfBirth,
+    HeadOfDepartment(std::string firstName,
+                     std::string lastName, Date dateOfBirth,
                      Department* department);
+
+    std::string ToString() override;
 };
 
 #endif // HEADOFDEPARTMENT_H
