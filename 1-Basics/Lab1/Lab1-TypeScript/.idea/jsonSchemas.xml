@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="appsscript">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="appsscript" />
+              <option name="relativePathToSchema" value="http://json.schemastore.org/appsscript" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="file://$USER_HOME$/Documents/config.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="botyara-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="botyara-schema" />
+              <option name="relativePathToSchema" value="$USER_HOME$/Documents/botyara-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="$USER_HOME$/Documents/config.json" />
+                  </Item>
+                  <Item>
+                    <option name="path" value="file://$USER_HOME$/Documents/config.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="bundle">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="bundle" />
+              <option name="relativePathToSchema" value="https://carafe.fm/schema/draft-01/bundle.schema.json" />
+              <option name="applicationDefined" value="true" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="file://$USER_HOME$/Documents/config.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

@@ -20,7 +20,7 @@ int main()
     std::cout << "Hello, World!" << std::endl;
 
     auto dept1 = new Department("Кафедра кафедры");
-    auto head1 = new HeadOfDepartment("Арсений", "Арсеньев", Date(10, 10, 1980), dept1);
+    auto head1 = new HeadOfDepartment("Арсений", "Арсеньев", Date(21, 10, 1980), dept1);
     auto dept2 = new Department("Кафедра вторая");
     auto head2 = new HeadOfDepartment("Аркадий", "Аркадьев", Date(20, 12, 1990), dept2);
 

@@ -11,9 +11,9 @@ Person::Person(std::string firstName, std::string lastName, Date dateOfBirth)
     getAllPerson()->push_back(this);
 }
 
- std::string Person::getAllPersonInfo()
+std::string Person::getAllPersonInfo()
 {
-    std::string result = "";
+    std::string result;
     for (auto person : _AllPerson)
     {
         result += person->ToString() + "\n";
@@ -23,5 +23,6 @@ Person::Person(std::string firstName, std::string lastName, Date dateOfBirth)
 
 std::string Person::ToString()
 {
-    return this->getFirstName() + " " + getLastName() + "; Дата рождения: " + getDateOfBirth().ToString();
+    return this->getFirstName() + " " + getLastName() + "; Дата рождения: " +
+           getDateOfBirth().ToString();
 }
