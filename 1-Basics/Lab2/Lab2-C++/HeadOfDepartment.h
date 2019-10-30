@@ -11,6 +11,8 @@ public:
                      std::string lastName, Date dateOfBirth,
                      Department* department);
 
+    void DoSomething() override;
+
     std::string ToString() override;
 };
 

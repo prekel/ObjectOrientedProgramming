@@ -9,7 +9,14 @@ Department::Department(std::string name)
 
 std::string Department::ToString()
 {
-    return getName() + "; Зав. кафедры: " + getHead()->getFirstName() + " " + getHead()->getLastName();
+    if (getHead())
+    {
+        return getName() + "; Зав. кафедры: " + getHead()->getFirstName() + " " + getHead()->getLastName();
+    }
+    else
+    {
+        return getName() + "; Зав. кафедры отсутствует";
+    }
 }
 
 Department::~Department()

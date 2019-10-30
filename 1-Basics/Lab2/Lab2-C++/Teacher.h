@@ -20,6 +20,8 @@ public:
 
     std::string ToString() override;
 
+    void DoSomething() override;
+
     ~Teacher() override = default;
 };
 

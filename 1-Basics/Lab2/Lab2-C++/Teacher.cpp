@@ -1,5 +1,6 @@
 #include <string>
 #include <utility>
+#include <iostream>
 
 #include "Teacher.h"
 #include "Person.h"
@@ -15,4 +16,9 @@ Teacher::Teacher(std::string firstName, std::string lastName,
 std::string Teacher::ToString()
 {
     return "Преподаватель: " + Person::ToString() + "; Кафедра: " + getDepartment()->getName();
+}
+
+void Teacher::DoSomething()
+{
+    std::cout << "Предодаватель что-то выполняет" << std::endl;
 }

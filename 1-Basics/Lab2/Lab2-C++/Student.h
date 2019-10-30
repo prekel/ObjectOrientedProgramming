@@ -12,9 +12,12 @@ public:
     {
         return _TicketId;
     }
+
     Student(std::string firstName,
             std::string lastName, Date dateOfBirth,
             int ticketId);
+
+    void DoSomething() override;
 
     std::string ToString() override;
 };

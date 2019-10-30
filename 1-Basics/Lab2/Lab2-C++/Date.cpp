@@ -1,3 +1,7 @@
+#include <string>
+#include <iostream>
+#include <iomanip>
+
 #include "Date.h"
 
 Date::Date(int day, int month, int year)
@@ -9,5 +13,11 @@ Date::Date(int day, int month, int year)
 
 std::string Date::ToString()
 {
-    return std::to_string(_Year) + "." + std::to_string(_Month) + "." + std::to_string(_Day);
+    std::stringstream ss;
+
+    ss << std::setfill('0') << std::setw(4) << getYear() << "."
+       << std::setfill('0') << std::setw(2) << getMonth() << "."
+       << std::setfill('0') << std::setw(2) << getDay();
+
+    return ss.str();
 }

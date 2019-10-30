@@ -20,6 +20,7 @@ int main(int argc, char** argv)
     auto head1 = new HeadOfDepartment("Арсений", "Арсеньев", Date(21, 10, 1980), dept1);
     auto dept2 = new Department("Кафедра вторая");
     auto head2 = new HeadOfDepartment("Аркадий", "Аркадьев", Date(20, 12, 1990), dept2);
+    auto dept3 = new Department("Кафедра третья");
 
     auto teacher11 = new Teacher("Станислав", "Станиславов", Date(12, 12, 1982), dept1);
     auto teacher12 = new Teacher("Сергей", "Сергеев", Date(6, 2, 1972), dept1);
@@ -29,13 +30,15 @@ int main(int argc, char** argv)
     auto teacher22 = new Teacher("Виктор", "Викторьев", Date(2, 5, 1981), dept2);
     auto teacher23 = new Teacher("Артемий", "Артемьев", Date(3, 6, 1982), dept2);
 
+    auto teacher31 = new Teacher("Александр", "Александр", Date(3, 12, 1999), dept3);
+
     auto p1 = new Student("Иван", "Иванов", Date(22, 9, 2019), 123456);
     auto p2 = new Student("Владислав", "Владиславов", Date(21, 9, 2019), 112345);
 
 
-    for (auto dept : {dept1, dept2})
+    for (auto dept : {dept1, dept2, dept3})
     {
-        std::cout << dept->getName() << ":" << std::endl;
+        std::cout << dept->ToString() << ":" << std::endl;
         for (auto teacher : *dept->getTeachers())
         {
             std::cout << teacher->ToString() << std::endl;
@@ -46,6 +49,12 @@ int main(int argc, char** argv)
 
     std::cout << "Все созданные записи о людях: " << std::endl << Person::getAllPersonInfo();
 
+    std::cout << std::endl << std::endl;
+    for (auto person : *Person::getAllPerson())
+    {
+        person->DoSomething();
+    }
+
     for (auto person : *Person::getAllPerson())
     {
         delete person;
@@ -53,6 +62,7 @@ int main(int argc, char** argv)
 
     delete dept1;
     delete dept2;
+    delete dept3;
 
     return 0;
 }

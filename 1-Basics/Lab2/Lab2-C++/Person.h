@@ -2,8 +2,6 @@
 #define PERSON_H
 
 #include <string>
-#include <ctime>
-#include <chrono>
 #include <vector>
 
 #include "Date.h"
@@ -41,6 +39,8 @@ public:
     static std::string getAllPersonInfo();
 
     Person(std::string firstName, std::string lastName, Date dateOfBirth);
+
+    virtual void DoSomething() = 0;
 
     virtual std::string ToString();
 

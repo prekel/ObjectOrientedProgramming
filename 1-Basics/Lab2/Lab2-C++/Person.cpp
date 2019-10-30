@@ -1,7 +1,7 @@
-#include "Person.h"
-
 #include <utility>
 #include <string>
+
+#include "Person.h"
 
 Person::Person(std::string firstName, std::string lastName, Date dateOfBirth)
 {
