@@ -10,7 +10,7 @@
 #include "Department.h"
 #include "Teacher.h"
 
-int main()
+int main(int argc, char** argv)
 {
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
