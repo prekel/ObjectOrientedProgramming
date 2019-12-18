@@ -1,10 +1,17 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Dialog extends JDialog {
+    private Controller controller;
+
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextField textField1;
+    private JPasswordField passwordField1;
+    private JPasswordField passwordField2;
 
     public Dialog() {
         setContentPane(contentPane);
@@ -40,8 +47,18 @@ public class Dialog extends JDialog {
     }
 
     private void onOK() {
+
+        var reg = controller.RegisterNewAccount(textField1.getText(),
+                Arrays.toString(passwordField1.getPassword()),
+                Arrays.toString(passwordField2.getPassword()));
+
+        if (reg.getStatus() != Registration.Status.Success) {
+
+            dispose();
+        }
+
         // add your code here
-        dispose();
+        //dispose();
     }
 
     private void onCancel() {
@@ -51,6 +68,7 @@ public class Dialog extends JDialog {
 
     public static void main(String[] args) {
         Dialog dialog = new Dialog();
+        dialog.controller = new Controller(new ArrayList<>());
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
