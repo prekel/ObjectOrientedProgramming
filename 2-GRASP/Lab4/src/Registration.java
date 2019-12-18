@@ -7,7 +7,7 @@ public class Registration {
         Success,
         BadLogin,
         LoginIsExist,
-        PasswordsAreSame,
+        PasswordsAreNotSame,
         BadPassword,
     }
 
@@ -46,15 +46,16 @@ public class Registration {
             return false;
         }
 
-        if (!password.equals(repeatPassword))
-        {
-            _status = Status.PasswordsAreSame;
-            return false;
-        }
-
         if (password.length() <= 3)
         {
             _status = Status.BadPassword;
+            return false;
+        }
+
+        if (!password.equals(repeatPassword))
+        {
+            _status = Status.PasswordsAreNotSame;
+            return false;
         }
 
         _registeredAccount = new Account(login, password);
