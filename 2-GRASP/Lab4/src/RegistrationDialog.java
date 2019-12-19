@@ -37,7 +37,6 @@ public class RegistrationDialog extends JDialog {
     }
 
     private void onRegister() {
-
         var reg = controller.RegisterNewAccount(textFieldLogin.getText(),
                 new String(passwordField.getPassword()),
                 new String(passwordFieldRepeat.getPassword()));
@@ -67,6 +66,7 @@ public class RegistrationDialog extends JDialog {
     public static void main(String[] args) {
         RegistrationDialog dialog = new RegistrationDialog();
         dialog.controller = new Controller(new AccountCollection());
+        dialog.controller.accountCollection.add(new Account("login", "password"));
         dialog.setTitle("Регистрация");
         dialog.pack();
         dialog.setVisible(true);
