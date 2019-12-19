@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="176.60009920634917" y="12.0">Account</node>
+    <node x="0.0" y="0.0">Registration.Status</node>
+    <node x="354.49618055555555" y="277.0">AccountCollection</node>
+    <node x="91.49618055555555" y="442.0">Controller</node>
+    <node x="33.341815476190476" y="191.0">Registration</node>
+    <node x="56.246180555555554" y="629.0">RegistrationDialog</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Registration" target="Account">
+      <point x="113.57142857142856" y="-100.5" />
+      <point x="279.41324404761906" y="171.0" />
+      <point x="261.10009920634917" y="171.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="Registration" target="Registration.Status">
+      <point x="-75.71428571428572" y="-100.5" />
+      <point x="90.12752976190475" y="171.0" />
+      <point x="85.0" y="171.0" />
+      <point x="17.0" y="70.5" />
+    </edge>
+    <edge source="Controller" target="Account">
+      <point x="125.625" y="-68.5" />
+      <point x="384.62118055555555" y="417.0" />
+      <point x="320.35009920634917" y="417.0" />
+      <point x="320.35009920634917" y="161.0" />
+      <point x="309.3858134920635" y="161.0" />
+      <point x="48.285714285714334" y="58.5" />
+    </edge>
+    <edge source="AccountCollection" target="Account">
+      <point x="0.0" y="-14.5" />
+      <point x="436.99618055555555" y="171.0" />
+      <point x="333.5286706349206" y="171.0" />
+      <point x="72.42857142857144" y="58.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Controller">
+      <point x="47.60000000000002" y="-156.5" />
+      <point x="222.84618055555558" y="599.0" />
+      <point x="342.74618055555555" y="599.0" />
+      <point x="83.75" y="68.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Registration">
+      <point x="-47.599999999999966" y="-156.5" />
+      <point x="127.64618055555559" y="599.0" />
+      <point x="48.21279761904762" y="599.0" />
+      <point x="48.21279761904762" y="417.0" />
+      <point x="77.50848214285716" y="417.0" />
+      <point x="-88.33333333333331" y="100.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="AccountCollection">
+      <point x="95.19999999999999" y="-156.5" />
+      <point x="270.44618055555554" y="609.0" />
+      <point x="436.99618055555555" y="609.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Controller" target="Registration">
+      <point x="-41.875" y="-68.5" />
+      <point x="217.12118055555555" y="417.0" />
+      <point x="254.1751488095238" y="417.0" />
+      <point x="88.33333333333331" y="100.5" />
+    </edge>
+    <edge source="Registration.Status" target="Registration">
+      <point x="51.0" y="70.5" />
+      <point x="119.0" y="171.0" />
+      <point x="127.98467261904759" y="171.0" />
+      <point x="-37.85714285714289" y="-100.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Registration.Status">
+      <point x="-95.19999999999996" y="-156.5" />
+      <point x="80.0461805555556" y="609.0" />
+      <point x="10.835466269841277" y="609.0" />
+      <point x="10.835466269841277" y="171.0" />
+      <point x="17.0" y="171.0" />
+      <point x="-51.0" y="70.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="231.00000000000023" y="565.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
