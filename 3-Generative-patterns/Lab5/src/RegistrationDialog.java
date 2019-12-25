@@ -2,10 +2,8 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.ArrayList;
-import java.util.Arrays;
 
-public class RegistrationDialog extends JDialog {
+public class RegistrationDialog extends JFrame {
     private Controller controller;
 
     private JPanel contentPane;
@@ -15,9 +13,26 @@ public class RegistrationDialog extends JDialog {
     private JPasswordField passwordField;
     private JPasswordField passwordFieldRepeat;
 
+    public static class Builder extends AbstractBuilder<RegistrationDialog> {
+        public Builder() {
+            result = new RegistrationDialog();
+        }
+
+        public Builder BuildController(Controller controller) {
+            getResult().controller = controller;
+            return this;
+        }
+
+        public Builder BuildProperties() {
+            getResult().setTitle("Регистрация");
+            getResult().pack();
+
+            return this;
+        }
+    }
+
     public RegistrationDialog() {
         setContentPane(contentPane);
-        setModal(true);
         getRootPane().setDefaultButton(buttonRegister);
 
         buttonRegister.addActionListener(e -> onRegister());
@@ -41,21 +56,10 @@ public class RegistrationDialog extends JDialog {
                 new String(passwordField.getPassword()),
                 new String(passwordFieldRepeat.getPassword()));
 
+        JOptionPane.showMessageDialog(this, reg.getStatusMessage());
+
         if (reg.getStatus() == Registration.Status.Success) {
-            JOptionPane.showMessageDialog(this, "Успешно зарегестрировано");
             dispose();
-        }
-        if (reg.getStatus() == Registration.Status.BadLogin) {
-            JOptionPane.showMessageDialog(this, "Недопустимый логин");
-        }
-        if (reg.getStatus() == Registration.Status.BadPassword) {
-            JOptionPane.showMessageDialog(this, "Недопустимый пароль");
-        }
-        if (reg.getStatus() == Registration.Status.LoginIsExist) {
-            JOptionPane.showMessageDialog(this, "Пользователь с таким логином уже существует");
-        }
-        if (reg.getStatus() == Registration.Status.PasswordsAreNotSame) {
-            JOptionPane.showMessageDialog(this, "Пароли не совпадают");
         }
     }
 
@@ -63,12 +67,7 @@ public class RegistrationDialog extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
-        var dialog = new RegistrationDialog();
-        dialog.controller = new Controller(new AccountCollection());
-        dialog.controller.accountCollection.add(new Account("login", "password"));
-        dialog.setTitle("Регистрация");
-        dialog.pack();
-        dialog.setVisible(true);
+    public void Show() {
+        setVisible(true);
     }
 }

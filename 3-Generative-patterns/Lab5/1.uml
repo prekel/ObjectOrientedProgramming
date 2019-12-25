@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="399.97900696864104" y="0.0">Account</node>
+    <node x="298.08194444444445" y="199.0">Registration.Status</node>
+    <node x="582.9831494386372" y="255.0">AccountCollection</node>
+    <node x="0.0" y="43.0">AbstractBuilder</node>
+    <node x="77.08194444444445" y="211.0">Account.Builder</node>
+    <node x="319.98314943863716" y="713.0">Controller</node>
+    <node x="164.19322977158347" y="1283.0">RegistrationDialog.Builder</node>
+    <node x="245.10400696864104" y="440.0">Registration</node>
+    <node x="140.17362562911336" y="900.0">RegistrationDialog</node>
+    <node x="456.16408730158736" y="1460.0">Main</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="Account.Builder">
+      <point x="-60.80000000000001" y="-47.5" />
+      <point x="471.36408730158735" y="1440.0" />
+      <point x="29.865481029810155" y="1440.0" />
+      <point x="29.865481029810155" y="420.0" />
+      <point x="127.33194444444445" y="420.0" />
+      <point x="-50.25" y="58.5" />
+    </edge>
+    <edge source="AccountCollection" target="Account">
+      <point x="0.0" y="-14.5" />
+      <point x="665.4831494386372" y="179.0" />
+      <point x="559.5901180797521" y="179.0" />
+      <point x="75.11111111111109" y="69.5" />
+    </edge>
+    <edge source="RegistrationDialog.Builder" target="AbstractBuilder">
+      <point x="-56.5" y="-58.5" />
+      <point x="220.69322977158347" y="1253.0" />
+      <point x="51.86548102981021" y="1253.0" />
+      <point x="51.86548102981021" y="179.0" />
+      <point x="56.625" y="179.0" />
+      <point x="-18.875" y="26.5" />
+    </edge>
+    <edge source="Account.Builder" target="AbstractBuilder">
+      <point x="-80.39999999999998" y="-58.5" />
+      <point x="97.18194444444447" y="179.0" />
+      <point x="94.375" y="179.0" />
+      <point x="18.875" y="26.5" />
+    </edge>
+    <edge source="Main" target="AccountCollection">
+      <point x="60.799999999999955" y="-47.5" />
+      <point x="592.9640873015874" y="1440.0" />
+      <point x="665.4831494386372" y="1440.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Registration.Status" target="Registration">
+      <point x="51.0" y="70.5" />
+      <point x="417.08194444444445" y="400.0" />
+      <point x="376.10400696864104" y="400.0" />
+      <point x="0.0" y="-111.5" />
+    </edge>
+    <edge source="RegistrationDialog.Builder" target="RegistrationDialog">
+      <point x="18.833333333333314" y="-58.5" />
+      <point x="296.0265631049168" y="1233.0" />
+      <point x="259.17362562911336" y="1233.0" />
+      <point x="0.0" y="156.5" />
+    </edge>
+    <edge source="Registration" target="Account.Builder">
+      <point x="-112.28571428571422" y="-111.5" />
+      <point x="263.8182926829268" y="360.0" />
+      <point x="227.83194444444445" y="360.0" />
+      <point x="50.25" y="58.5" />
+    </edge>
+    <edge source="Registration" target="Registration.Status">
+      <point x="-37.42857142857139" y="-111.5" />
+      <point x="338.67543554006966" y="390.0" />
+      <point x="383.08194444444445" y="390.0" />
+      <point x="17.0" y="70.5" />
+    </edge>
+    <edge source="Registration" target="Account">
+      <point x="37.428571428571445" y="-111.5" />
+      <point x="413.5325783972125" y="410.0" />
+      <point x="470.3654810298102" y="410.0" />
+      <point x="470.3654810298102" y="179.0" />
+      <point x="465.7012291908633" y="179.0" />
+      <point x="-18.77777777777777" y="69.5" />
+    </edge>
+    <edge source="Account.Builder" target="Account">
+      <point x="0.0" y="-58.5" />
+      <point x="177.58194444444445" y="159.0" />
+      <point x="409.36789585752996" y="159.0" />
+      <point x="-75.11111111111109" y="69.5" />
+    </edge>
+    <edge source="Controller" target="Account">
+      <point x="125.62499999999997" y="-68.5" />
+      <point x="613.1081494386372" y="688.0" />
+      <point x="543.4206494386372" y="688.0" />
+      <point x="543.4206494386372" y="179.0" />
+      <point x="540.8123403019745" y="179.0" />
+      <point x="56.33333333333337" y="69.5" />
+    </edge>
+    <edge source="Main" target="RegistrationDialog.Builder">
+      <point x="-30.400000000000034" y="-47.5" />
+      <point x="501.7640873015873" y="1430.0" />
+      <point x="277.19322977158345" y="1430.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="Main" target="Controller">
+      <point x="30.399999999999977" y="-47.5" />
+      <point x="562.5640873015873" y="1440.0" />
+      <point x="556.6932297715834" y="1440.0" />
+      <point x="556.6932297715834" y="875.0" />
+      <point x="613.1081494386372" y="875.0" />
+      <point x="125.62499999999997" y="68.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Registration">
+      <point x="0.0" y="-156.5" />
+      <point x="259.17362562911336" y="875.0" />
+      <point x="251.74345722028642" y="875.0" />
+      <point x="251.74345722028642" y="688.0" />
+      <point x="288.77067363530773" y="688.0" />
+      <point x="-87.33333333333331" y="111.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Controller">
+      <point x="79.33333333333331" y="-156.5" />
+      <point x="338.5069589624467" y="875.0" />
+      <point x="361.85814943863716" y="875.0" />
+      <point x="-125.625" y="68.5" />
+    </edge>
+    <edge source="RegistrationDialog.Builder" target="Controller">
+      <point x="94.16666666666663" y="-58.5" />
+      <point x="371.3598964382501" y="1263.0" />
+      <point x="480.0746128532714" y="1263.0" />
+      <point x="480.0746128532714" y="875.0" />
+      <point x="445.60814943863716" y="875.0" />
+      <point x="-41.875" y="68.5" />
+    </edge>
+    <edge source="Controller" target="Registration">
+      <point x="-125.625" y="-68.5" />
+      <point x="361.85814943863716" y="688.0" />
+      <point x="376.10400696864104" y="688.0" />
+      <point x="0.0" y="111.5" />
+    </edge>
+    <edge source="RegistrationDialog" target="Registration.Status">
+      <point x="-79.33333333333331" y="-156.5" />
+      <point x="179.84029229578005" y="875.0" />
+      <point x="219.16012388695304" y="875.0" />
+      <point x="219.16012388695304" y="370.0" />
+      <point x="315.08194444444445" y="370.0" />
+      <point x="-51.0" y="70.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="357.375" y="660.75" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
