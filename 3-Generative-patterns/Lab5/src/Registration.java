@@ -60,7 +60,10 @@ public class Registration {
             return false;
         }
 
-        var accountsWithLoginCount = accountCollection.stream().filter(p -> p.getLogin().equals(login)).count();
+        var accountsWithLoginCount = accountCollection
+                .stream()
+                .filter(p -> p.getLogin().equals(login))
+                .count();
         if (accountsWithLoginCount >= 1)
         {
             status = Status.LoginIsExist;

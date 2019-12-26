@@ -4,8 +4,6 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class RegistrationDialog extends JFrame {
-    private Controller controller;
-
     private JPanel contentPane;
     private JButton buttonRegister;
     private JButton buttonCancel;
@@ -16,11 +14,6 @@ public class RegistrationDialog extends JFrame {
     public static class Builder extends AbstractBuilder<RegistrationDialog> {
         public Builder() {
             result = new RegistrationDialog();
-        }
-
-        public Builder BuildController(Controller controller) {
-            getResult().controller = controller;
-            return this;
         }
 
         public Builder BuildProperties() {
@@ -52,7 +45,7 @@ public class RegistrationDialog extends JFrame {
     }
 
     private void onRegister() {
-        var reg = controller.RegisterNewAccount(textFieldLogin.getText(),
+        var reg = Controller.getInstance().RegisterNewAccount(textFieldLogin.getText(),
                 new String(passwordField.getPassword()),
                 new String(passwordFieldRepeat.getPassword()));
 
