@@ -30,6 +30,7 @@ public class MessageBox extends JFrame {
             } else {
                 getResult().setDefaultCloseOperation(DISPOSE_ON_CLOSE);
             }
+
             return this;
         }
     }
