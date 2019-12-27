@@ -3,8 +3,7 @@ import java.util.Collection;
 
 
 public class Registration {
-    enum Status
-    {
+    enum Status {
         Success,
         BadLogin,
         LoginIsExist,
@@ -18,18 +17,16 @@ public class Registration {
 
     private Account registeredAccount;
 
-    public Status getStatus()
-    {
+    public Status getStatus() {
         return status;
     }
 
-    public String getStatusMessage()
-    {
+    public String getStatusMessage() {
         if (getStatus() == Registration.Status.Success) {
             return "Успешно зарегестрировано";
         }
         if (getStatus() == Registration.Status.BadLogin) {
-            return"Недопустимый логин";
+            return "Недопустимый логин";
         }
         if (getStatus() == Registration.Status.BadPassword) {
             return "Недопустимый пароль";
@@ -43,8 +40,7 @@ public class Registration {
         return "";
     }
 
-    public Account getRegisteredAccount()
-    {
+    public Account getRegisteredAccount() {
         return registeredAccount;
     }
 
@@ -52,10 +48,8 @@ public class Registration {
         this.accountCollection = accountCollection;
     }
 
-    public boolean TryRegister(String login, String password, String repeatPassword)
-    {
-        if (login.length() <= 3)
-        {
+    public boolean TryRegister(String login, String password, String repeatPassword) {
+        if (login.length() <= 3) {
             status = Status.BadLogin;
             return false;
         }
@@ -64,20 +58,17 @@ public class Registration {
                 .stream()
                 .filter(p -> p.getLogin().equals(login))
                 .count();
-        if (accountsWithLoginCount >= 1)
-        {
+        if (accountsWithLoginCount >= 1) {
             status = Status.LoginIsExist;
             return false;
         }
 
-        if (password.length() <= 3)
-        {
+        if (password.length() <= 3) {
             status = Status.BadPassword;
             return false;
         }
 
-        if (!password.equals(repeatPassword))
-        {
+        if (!password.equals(repeatPassword)) {
             status = Status.PasswordsAreNotSame;
             return false;
         }

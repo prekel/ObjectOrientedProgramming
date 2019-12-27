@@ -1,8 +1,7 @@
 public class AbstractBuilder<T> {
     protected T result;
 
-    public T getResult()
-    {
+    public T getResult() {
         return result;
     }
 }

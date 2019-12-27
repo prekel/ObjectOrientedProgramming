@@ -11,7 +11,7 @@ public class RegistrationDialog extends JFrame {
     private JPasswordField passwordField;
     private JPasswordField passwordFieldRepeat;
 
-    public static class Builder extends AbstractBuilder<RegistrationDialog> {
+    public static class Builder extends AbstractWindowBuilder<RegistrationDialog> {
         public Builder() {
             result = new RegistrationDialog();
         }
@@ -24,7 +24,7 @@ public class RegistrationDialog extends JFrame {
         }
     }
 
-    public RegistrationDialog() {
+    private RegistrationDialog() {
         setContentPane(contentPane);
         getRootPane().setDefaultButton(buttonRegister);
 
@@ -49,11 +49,12 @@ public class RegistrationDialog extends JFrame {
                 new String(passwordField.getPassword()),
                 new String(passwordFieldRepeat.getPassword()));
 
-        JOptionPane.showMessageDialog(this, reg.getStatusMessage());
-
-        if (reg.getStatus() == Registration.Status.Success) {
-            dispose();
-        }
+        new MessageBox.Builder()
+                .BuildProperties()
+                .BuildMessage(reg.getStatusMessage())
+                .BuildIsNeedExit(reg.getStatus() == Registration.Status.Success)
+                .getResult()
+                .Show();
     }
 
     private void onCancel() {
